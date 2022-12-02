@@ -10,5 +10,13 @@
 	"extensions": [
 		"redhat.vscode-yaml"
 	],
-	"forwardPorts": [8000]
+	"forwardPorts": [8000],
+	// https://containers.dev/implementors/json_reference/
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install --yes bash-completion",
+	"mounts": [
+		// https://cli.github.com/manual/gh_completion
+		"source=${localWorkspaceFolder}/.bash_profile,target=/home/vscode/.bash_aliases,type=bind,consistency=cached",
+		// https://cli.github.com/manual/gh_help_environment
+		"source=${localWorkspaceFolder}/.config,target=/home/vscode/.config,type=bind,consistency=cached"
+	]
 }

@@ -31,7 +31,13 @@ mkdocs gh-deploy
 
 ### Known Problems
 
+####
+
+* [Resolving Git line ending issues in containers (resulting in many modified files)](https://code.visualstudio.com/docs/devcontainers/tips-and-tricks#_resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files)
+
 #### Missing gpg keys
+
+* [Sharing GPG Keys](https://code.visualstudio.com/docs/devcontainers/containers#_sharing-gpg-keys)
 
 ```
 $ git commit
