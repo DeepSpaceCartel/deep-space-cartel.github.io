@@ -1,0 +1,18 @@
+site_name: Deep Space Cartel
+site_author: Aleksandr Ilin
+site_description: Association of manufacturers or suppliers with the purpose of maintaining prices at a high level and restricting competition.
+theme:
+  name: material
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
