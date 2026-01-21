@@ -19,7 +19,7 @@ const navItems = [
     >
         {
             navItems
-                .filter((item) => item.href !== pathname)
+                .filter((item) => item.href !== pathname && item.href  + '/' !== pathname)
                 .map((item) => (
                     <a href={item.href} class="hover:opacity-100">
                         {item.label}
