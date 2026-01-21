@@ -1,0 +1,35 @@
+---
+const { pathname } = Astro.url;
+
+const navItems = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+];
+---
+
+<header
+    class="relative z-10 flex items-center justify-between px-10 py-6 backdrop-blur-xl bg-black/10 border-b border-white/10"
+>
+    <div class="font-logo text-xl tracking-wider">
+        DEEP SPACE <span class="opacity-70">CARTEL</span>
+    </div>
+
+    <nav
+        class="hidden md:flex gap-8 text-sm uppercase tracking-widest opacity-80"
+    >
+        {
+            navItems
+                .filter((item) => item.href !== pathname)
+                .map((item) => (
+                    <a href={item.href} class="hover:opacity-100">
+                        {item.label}
+                    </a>
+                ))
+        }
+        <!--
+        <a href="#" class="hover:opacity-100">Services</a>
+        <a href="#" class="hover:opacity-100">Projects</a>
+        <a href="#" class="hover:opacity-100">Contact</a>
+        -->
+    </nav>
+</header>

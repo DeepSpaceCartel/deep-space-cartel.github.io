@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Naviation from "../components/Navigation.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro"
+
+const quote =
+	"And those who were seen dancing were thought to be insane by those who could not hear the music";
+---
+
+<Layout title="Deep Space Cartel">
+	<section class="relative h-screen w-full overflow-hidden">
+		<div
+			class="absolute inset-0 bg-cover bg-center bg-fixed"
+			style="background-image: url('/images/hero.png');"
+		>
+		</div>
+
+		<!-- Dark overlay -->
+		<div class="absolute inset-0 bg-black/40"></div>
+
+		<Naviation />
+		<Hero quote={quote} />
+		<Footer />
+	</section>
+</Layout>
