@@ -2,10 +2,10 @@
 const { quote } = Astro.props
 ---
 
-<div class="relative z-10 flex h-full justify-center px-6">
-    <h1
-        class="fade-up uppercase pt-50 lg:pt-10 max-w-5xl text-center font-body text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
-    >
-    {quote}
+<div class="relative z-10 grid h-full grid-rows-3 px-6">
+  <div class="flex items-center justify-center row-start-1">
+    <h1 class="fade-up uppercase max-w-6xl text-center font-body text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+      {quote}
     </h1>
+  </div>
 </div>
